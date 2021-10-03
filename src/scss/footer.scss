@@ -10,6 +10,17 @@
     }    
 }
 
+@mixin font-link {
+    font-size: 1.8rem;
+    line-height: 1.22; 
+}
+
+@mixin font-link-phone {
+        font-size: 1.4rem;
+        line-height: 1.21;
+    
+}
+
 .footer{
     padding-top: 93px;
     padding-bottom: 189px;
@@ -32,14 +43,12 @@
 
 
 .footer__link{
-    font-size: 1.8rem;
-    line-height: 1.22;
+    @include font-link;
     font-weight: 400;
     color: #333333;
 
     @include media-phone{
-        font-size: 1.4rem;
-        line-height: 1.21;
+        @include font-link-phone;
     }
 }
 
@@ -62,14 +71,12 @@
 }
 
 .footer__contact-link{
-    font-size: 1.8rem;
-    line-height: 1.22;
+    @include font-link;
     font-weight: 400;
     color: #333333;  
 
     @include media-phone{
-        font-size: 1.4rem;
-        line-height: 1.21;
+        @include font-link-phone;
     }
 }
 

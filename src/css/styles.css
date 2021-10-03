@@ -352,14 +352,14 @@ body {
       width: 100%; } }
 
 .title {
-  font-size: 2.4rem;
-  line-height: 1.21;
   font-weight: 700;
-  color: #333333; }
+  color: #333333;
+  font-size: 2.4rem;
+  line-height: 1.20833; }
   @media (max-width: 767px) {
     .title {
       font-size: 2.4rem;
-      line-height: 1.21;
+      line-height: 1.20833;
       font-weight: 600;
       text-align: center; } }
 
