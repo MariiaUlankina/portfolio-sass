@@ -1,0 +1,178 @@
+@mixin media-tablet {
+    @media (max-width:1200px){
+        @content;
+    }    
+}
+
+@mixin media-phone {
+    @media (max-width:767px){
+        @content;
+    }    
+}
+
+.skills{
+    padding-top: 93px;
+    padding-bottom: 145px;
+    background-color: #FFFAF2;
+
+    @include media-phone{
+        padding-top: 25px;
+        padding-bottom: 19px;
+    }
+}
+
+
+.skills__title{
+    margin-bottom: 86px;
+
+    @include media-phone{
+        margin-bottom: 25px;
+    }
+
+}
+
+
+.skills__content{
+    display: flex;
+    gap:125px;
+    align-items: center;
+
+    @include media-tablet{
+        gap:60px;
+    }
+
+    @include media-phone{
+       display: flex;
+        flex-direction: column;
+        gap:26px;
+        align-items: center; 
+    }
+}
+
+
+.skills__image{
+    width: 350px;
+
+    @include media-tablet{
+        width: 270px;
+}
+
+    @include media-phone{
+        width: 220px;
+    }
+}
+
+
+.skills__row-description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.skills__row-description-title{
+    width: 190px;
+    flex-shrink: 0;
+    font-size: 1.8rem;
+    line-height: 1.38;
+    font-weight: 600;
+    color: #333333;
+
+
+    @include media-tablet{
+        width: 110px;
+        font-size: 1.4rem
+    }
+
+    @include media-phone{
+       width: 100px;
+        flex-shrink: 0;
+        font-size: 1.2rem;
+        line-height: 2.08; 
+    }
+}
+
+.skills__row-description-text{
+    font-size: 1.8rem;
+    line-height: 1.38;
+    font-weight: 400;
+    flex-grow: 1;
+
+    @include media-tablet{
+      font-size: 1.4rem;  
+    }
+
+    @include media-phone{
+        font-size: 1.2rem;
+        line-height: 2.08;
+    }
+}
+
+.skills__row-description-progress-bar{
+    background-color: #F5D6AB;
+    height: 24px;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+
+
+    @include media-phone{
+        background-color: #F5D6AB;
+        height: 18px;
+        flex-grow: 1;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+
+.skills__row-description-progress-bar-point{
+    position: absolute;
+    background-color: #C66C49;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+
+.skills__list{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+
+
+
+    @include media-tablet{
+        gap: 18px;
+    }
+
+    @include media-phone{
+        gap:15px;
+    }
+}
+
+.skills__items{
+    display: flex;
+    flex-direction: column;
+    gap:21px;
+
+    @include media-tablet{
+        gap: 10px;
+    }
+
+    @include media-phone{
+        gap:7px;
+    }
+}
+
+.skills__items:first-child{
+    height: 65px;
+
+    @include media-tablet{
+        height: 40px;
+    }
+
+    @include media-phone{
+        height: 31px;
+    }
+}

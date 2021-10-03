@@ -1,0 +1,164 @@
+@mixin media-tablet {
+    @media (max-width:1200px){
+        @content;
+    }    
+}
+
+@mixin media-phone {
+    @media (max-width:767px){
+        @content;
+    }    
+}
+
+.hero{
+    background-image: url("../image/bg.jpg") ;
+    background-size: cover;
+}
+
+
+.container__hero{
+    min-height: 100vh;
+    padding-top: 93px;
+    padding-bottom: 50px;
+    display: flex; 
+    flex-direction: column; 
+    color: white; 
+    
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-phone{
+        justify-content: center;
+    }
+}
+
+
+.header__navigation{
+    display: flex;
+
+    @include media-phone{
+        display: none;
+        position: absolute;
+    }
+}
+
+.header__list{
+    display: flex;
+    justify-content: space-between;
+    gap:60px;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    justify-content: center;
+}
+
+
+.logo{
+    font-size: 2.4rem;
+    line-height: 1.21;
+    font-weight: 700;
+
+    @include media-phone{
+       flex-grow: 1;
+        text-align: center;
+} 
+}
+
+
+
+
+.header__link{
+    font-size: 1.8rem;
+    line-height: 1.22;
+    font-weight: 400;
+}
+
+.header__link--enter{
+    font-weight: 700;
+}
+
+
+.hero-content__title{
+    font-size: 6.4rem;
+    line-height: 1.21;
+    font-weight: 400;
+    margin-bottom: 26px;
+
+
+    @include media-tablet{
+        font-size: 4.4rem;
+        line-height: 1.21;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    @include media-phone{
+        font-size: 2rem;
+        line-height: 1.2;
+        font-weight: 400;
+        margin-bottom: 13px;
+        text-align: center;
+    }
+}
+
+
+.button__header-navigation{
+    display: none;
+
+    @include media-phone{
+        display: flex;
+        flex-grow: 0;
+    }
+}
+
+
+.hero-content__text{
+    font-size: 2.4rem;
+    line-height: 1.21;
+    font-weight: 400;
+    margin-bottom: 106px;
+
+
+    @include media-tablet{
+        font-size: 2rem;
+        line-height: 1.21;
+        font-weight: 400;
+        margin-bottom: 86px;
+    }
+
+    @include media-phone{
+        font-size: 1.3rem;
+        line-height: 1.23;
+        font-weight: 400;
+        margin-bottom: 41px;
+        text-align: center;
+    }
+}
+
+.hero-content__link{
+    font-size: 1.8rem;
+    line-height: 1.22;
+    font-weight: 400;  
+    text-decoration: underline;
+
+    @include media-tablet{
+        font-size: 1.5rem;
+        line-height: 1.22;
+        font-weight: 400;
+    }
+
+    @include media-phone{
+       font-size: 1.3rem;
+        line-height: 1.23;
+        font-weight: 400;
+        text-align: center; 
+    }
+}
+

@@ -1,0 +1,153 @@
+@mixin media-tablet {
+    @media (max-width:1200px){
+        @content;
+    }    
+}
+
+@mixin media-phone {
+    @media (max-width:767px){
+        @content;
+    }    
+}
+
+@mixin media-phone-m {
+    @media (max-width:560px){
+        @content;
+    }    
+}
+
+
+.portfolio{
+    padding-top: 93px;
+    padding-bottom: 145px;
+
+    @include media-phone{
+       padding-top: 25px;
+        padding-bottom: 19px; 
+    }
+}
+
+.portfolio__row{
+    display: grid;
+    grid-template-columns: 349px 1fr;
+    gap:125px;
+    align-content: space-between;
+
+
+    @include media-tablet{
+       grid-template-columns: 200px 1fr;
+        gap: 40px;
+        padding: 10px 10px; 
+
+    }
+
+    @include media-phone{
+       grid-template-columns: auto;
+        justify-items: center;
+        gap:20px; 
+    }
+
+    @include media-phone-m{
+        padding: 10px 10px;
+    }
+}
+
+
+.portfolio__content{
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+
+    @include media-phone{
+       grid-template-rows: auto;  
+    }
+}
+
+.portfolio__images{
+    display: grid;
+    grid-template:"ships bridge" 145px
+                  "river bridge" 233px
+                  "river building" auto / 350px 255px auto;
+    gap:30px;
+    padding-top: 66px;
+
+    @include media-tablet{
+        grid-template:"ships bridge" 115px
+                      "river bridge" 203px
+                      "river building" auto / 310px 225px auto;
+        gap:20px;
+    }
+
+    @include media-phone{
+        grid-template:"ships bridge" 105px
+                      "river bridge" 193px
+                      "river building" auto / 290px 210px auto;
+        gap:20px;
+        padding: 20px 10px;
+    }
+
+    @include media-phone-m{
+       grid-template:"ships bridge" 70px
+                      "river bridge" 114px
+                      "river building" auto / 170px 124px auto;
+        gap:14px;
+        padding: 0; 
+    }
+}
+
+.portfolio__images-ships{
+    grid-area: ships;
+}
+
+.portfolio__images-river{
+    grid-area:river;
+}
+
+.portfolio__images-building{
+    grid-area: building;
+    grid-row: 2 / 3;
+    align-self: end;
+}
+
+.portfolio__images-bridge{
+    grid-area: bridge;
+}
+
+.portfolio__title{
+    margin-bottom: 86px;
+
+    @include media-phone{
+        margin-bottom: 19px;
+    }
+}
+
+
+.portfolio__content--title{
+    font-size: 1.8rem;
+    line-height: 1.39;
+    font-weight: 600;
+
+    @include media-phone{
+       ont-size: 1.4rem;
+        line-height: 1.78;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 15px; 
+    }
+}
+
+.portfolio__text{
+    flex-grow: 1;
+}
+
+.portfolio__images img{
+    width: 100%;
+}
+
+.portfolio__buttons-item--right{
+    transform: rotate(180deg);
+    margin-left: 14px;
+
+    @include media-phone{
+       display: none; 
+    }
+}

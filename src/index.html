@@ -16,8 +16,11 @@
     <!--START HERO-->
 
     <section class="hero">
-        <div class="container">
+        <div class="container container__hero">
         <header class="header">
+            <button class="button__header-navigation">
+                <img src="image/navigation.svg" alt="" class="header__button-navigation">
+            </button>
             <a href="#" class="logo">Portfolio</a>
             <nav class="header__navigation">
                 <ul class="header__list">
@@ -72,7 +75,7 @@
         <div class="container">
             <h2 class="title skills__title">Skills</h2>
             <div class="skills__content">
-                <img src="img/man.jpg" alt="man" class="skills__image">
+                <img src="image/man.jpg" alt="man" class="skills__image">
                 <div class="skills__row">
                     <ul class="skills__list">
                         <li class="skills__items">
@@ -91,7 +94,7 @@
                                     UX Research
                                 </div>
                                 <div class="skills__row-description-progress-bar">
-                                    
+                                    <div class="skills__row-description-progress-bar-point" style="width: 85%;"></div> 
                                 </div>
                             </div>
 
@@ -110,7 +113,7 @@
                                     UI Design
                                 </div>
                                 <div class="skills__row-description-progress-bar">
-                                    
+                                    <div class="skills__row-description-progress-bar-point" style="width: 75%;"></div> 
                                 </div>
                             </div>
 
@@ -129,7 +132,7 @@
                                     Front-end Dev
                                 </div>
                                 <div class="skills__row-description-progress-bar">
-                                    
+                                    <div class="skills__row-description-progress-bar-point" style="width: 60%;"></div> 
                                 </div>
                             </div>
 
@@ -157,25 +160,28 @@
 
     <section class="portfolio">
         <div class="container">
+            <h2 class="title portfolio__title">Portfolio</h2>
+            <div class="portfolio__row"> 
                 <div class="portfolio__content">
-                    <h2>UX Research</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac dictum nibh nam odio cursus id. 
+                    <h3 class="portfolio__content--title">UX Research</h3>
+                    <p class="text portfolio__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac dictum nibh nam odio cursus id. 
                     Diam massa semper a tincidunt cursus ultricies lectus eget urna.</p>
                 <div class="portfolio__buttons">
                     <button class="portfolio__buttons-item">
-                        <img src="img/arrow.svg" alt="arrow left">
+                        <img src="image/arrow.svg" alt="arrow left">
                     </button>
                     <button class="portfolio__buttons-item portfolio__buttons-item--right">
-                        <img src="img/arrow.svg" alt="arrow right">
+                        <img src="image/arrow.svg" alt="arrow right">
                     </button>
                 </div>
                 </div>
                 <div class="portfolio__images">
-                    <img src="img/ships.jpg" alt="ships" class="portfolio__images-ships">
-                    <img src="img/bridge.jpg" alt="bridge" class="portfolio__images-bridge">
-                    <img src="img/river.jpg" alt="river" class="portfolio__images-river">
-                    <img src="img/building.jpg" alt="building" class="portfolio__images-building">
+                    <img src="image/ships.jpg" alt="ships" class="portfolio__images-ships">
+                    <img src="image/bridge.jpg" alt="bridge" class="portfolio__images-bridge">
+                    <img src="image/river.jpg" alt="river" class="portfolio__images-river">
+                    <img src="image/building.jpg" alt="building" class="portfolio__images-building">
                 </div>
+            </div>
         </div>
     </section>
 
@@ -192,6 +198,7 @@
     <h2 class="title footer__title">
         Get in Touch
     </h2>
+    <div class="footer__content">
     <ul class="footer_list">
         <li class="footer__item">
             <a href="" class="footer__link">Dribbble</a>
@@ -204,6 +211,9 @@
         </li>
         <li class="footer__item">
             <a href="" class="footer__link">GitHub</a>
+        </li>
+        <li class="footer__item">
+            <a href="" class="footer__link">Medium</a>
         </li>
         <li class="footer__item">
             <a href="" class="footer__link">LinkedIn</a>
@@ -222,10 +232,16 @@
         <a href="mailto:seyrig@mailme.com" class="footer__contact-link">seyrig@mailme.com</a>
         <a href="tel:+556645665544" class="footer__contact-link">+ 55 6645 665544</a>
     </div>
+    </div>
 </div>
 </footer>
 
 <!--END FOOTER-->
+
+<button class="to-top">
+    <img src="image/arrow.svg" alt="arrow to top" class="to-top__image">
+</button>
+
 
 </body>
 </html>
